@@ -1,0 +1,20 @@
+<div>
+    <table class="center">
+        <tr *ngFor="let row of board | keyvalue">
+            <!-- <div class="row-label">{{correctRow(row.key)}}</div> -->
+            <td 
+                (click)="findMovesOrMovePiece(row.key, col.key)" 
+                *ngFor="let col of row.value | keyvalue" 
+                [ngClass]="boardColor[row.key][col.key]"
+            >
+                <!-- <div class="column-label">{{col.key}}</div> -->
+                <div [ngClass]="{ circle: boardCircle[row.key][col.key] }">
+                    <ng-container *ngIf="col.value !== null && col.value.type !== null">
+                        <img class="piece" src={{urlConcat(col.value.type)}}>
+                    </ng-container>
+                </div>
+            </td>
+        </tr> 
+    </table>
+    <button [disabled]="loading" class="reverse-button" (click)="reverseMove()">Reverse Move</button>
+</div>

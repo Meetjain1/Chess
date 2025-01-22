@@ -1,0 +1,30 @@
+.move-piece {
+    height: 50px;
+    width: min-content;
+}
+
+.move {
+    // enable vertical scroll
+    overflow-y: scroll;
+    align-items: flex-start;
+    height: 500px;
+
+}
+
+.move-pane {
+    // align top
+    align-items: flex-start;
+    align-content: flex-start;
+    background-color: lightgray;
+    padding: 10px;
+    margin: 10px;
+}
+
+.move-list {
+    margin: auto;
+    text-align: center;
+    font-size: xx-large;
+    // padding-bottom: 10px;
+    padding-top: 5%;
+
+}

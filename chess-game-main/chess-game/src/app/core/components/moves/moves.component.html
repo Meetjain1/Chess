@@ -1,0 +1,18 @@
+<div class="move-list">Move List</div>
+<div class="move">
+    <div *ngFor="let move of moves" class="move-pane">
+        <div>
+        <div>
+            <img src="assets/{{move.piece.type}}.png" alt="{{move.piece.type}}" class="move-piece">
+            <span class="move-start">
+                {{move.start[0] + move.start[1]}}
+            </span>
+            ---->
+            <span class="move-end">
+                {{move.end[0] + move.end[1]}}
+            </span>
+        </div>
+        
+        </div>
+    </div>
+</div>

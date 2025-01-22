@@ -1,0 +1,57 @@
+tr { 
+    width: 12.5%;
+    height: 12.5%;
+}
+
+td { 
+    width: 12.5%;
+    height: 12.5%;
+}
+
+table { 
+    // width: 80vh;
+        //     height: 80vh;
+        width: 500px;
+        height: 500px;
+    border: 3px solid black;
+}
+
+.piece { 
+    width: 60px;
+    height: 60px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.circle { 
+    width: 100%;
+        height: 100%;
+    margin: auto;
+    background-color: rgba(185, 184, 184, 0.87);
+    border-radius: 1000px;
+}
+
+.black { 
+    background-color: grey;
+}
+
+.white { 
+    background-color: white;
+}
+.column-label {
+    position: absolute;
+    top: 0;
+    padding: 3px;
+}
+
+.row-label {
+    position: absolute;
+    left: 0;
+    padding: 3px;
+}
+.reverse-button {
+    width: 100%;
+    height: 100%;
+    padding: 12px;
+}

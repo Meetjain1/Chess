@@ -1,0 +1,48 @@
+<div [ngClass]="{'mobile': mediaType === media.MOBILE}">
+    <div *ngIf="mediaType !== media.MOBILE; else mobileView">
+        <div>
+            <div class="title">
+                <b>CHESS!</b>
+            </div>
+            </div>
+        <div class="row gamepanel">
+            <div class="col-md-3 col-sm-3 options">
+                <table>
+                    <tr>
+                        <th>
+                            <button (click)="resetBoard()">Reset</button>
+                            <--- Click Me
+                        </th>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-md-6 col-sm-6">
+                <app-board (updateMoves)="onUpdateMoves()" [board]="board"></app-board>
+            </div>
+            <div class="col-md-3 col-sm-3 logger">
+                <table>
+                    <tr>
+                        <th><app-moves [moves]="moves"></app-moves></th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <ng-template #mobileView class="mobile">
+        <div class="title-mobile">
+            <b>CHESS!</b>
+        </div>
+        <app-board (updateMoves)="onUpdateMoves()" [board]="board"></app-board>
+        <table>
+            <tr>
+                <th><button (click)="resetBoard()">Reset</button><--- Click Me</th>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th><app-moves [moves]="moves"></app-moves></th>
+            </tr>
+        </table>
+    </ng-template>
+</div>
